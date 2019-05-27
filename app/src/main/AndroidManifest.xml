@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kitesoft.hello">
+
+    <!-- 앱의 아이콘과 라벨을 설정할 수 있음.-->
+    <!-- icon속성 : res폴더>>drawable폴더 안에 icon.png파일 복사붙이기. (주의! 이미지파일이름에 대문자나 특수문자 안됨. 숫자 첫글자 안됨) : 지금은 해당 위치의 경로지정(@drawable/icon) 쯤으로 생각해도 됨-->
+    <!-- label : 디바이스의 설치된 앱런처(앱 목록)화면에 보여지는 제목글씨 지정 : (회색글씨를 클릭하면 글씨가 써있는 경로 보임 : res폴더>>values폴더안에 strings.xml문서 열어보면 name="app_name"지정된 <string>의 Hello글씨가 화면에 보여지는 것임 : 이 글씨를 변경하면 앱제목이 바뀌어서 표시됨-->
+    <!-- roundIcon : 디바이스(폰)들 중에 앱런처(앱 목록)화면을 만들때 모서리가 둥근 아이콘을 사용하는 경우에 보여질 아이콘 이미지 지정-->
+    <!-- supportsRtl : 일본어처럼 오른쪽에서 왼쪽으로 글씨를 읽는 나라들의 UI를 지원하는지 여부 [ true/false ]-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 이 앱에서는 화면을 보여주는 MainActivity가 있다고 명시-->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <!-- 이 MainActivity가 처음 시작되는 Main 컴포넌트라고 명시 : 처음 만들면 자동으로 이렇게 되어 있음.-->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -15,6 +15,5 @@ public class MainActivity extends AppCompatActivity {
         //화면에 보여줄 View를 설정하는 메소드
         setContentView(R.layout.activity_main);
         // 파라미터로 전달된 R.layout.activity_main은 res폴더의 layout폴더안에 있는 activity_main.xml를 보여주겠다는 코드임
-
     }
 }
